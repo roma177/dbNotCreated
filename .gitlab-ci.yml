@@ -25,7 +25,7 @@ unit-test-server:
   services:
   - mongo:3.6.11
   variables:
-  - JWT_SECRET: f0v89dj0df98
-  - NODE_ENV: test
-  - DB_NAME_TEST: printbay_test
-  - MONGO_DB_URL: mongo://mongo:27017
+    JWT_SECRET: f0v89dj0df98
+    NODE_ENV: test
+    DB_NAME_TEST: printbay_test
+    MONGO_DB_URL: mongo://mongo:27017
