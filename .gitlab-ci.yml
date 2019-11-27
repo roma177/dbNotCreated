@@ -42,3 +42,10 @@ variables:
   JWT_SECRET: f0v89dj0df98
   DB_NAME_TEST: printbay_test
   MONGO_DB_URI: mongodb://mongo:27017
+
+deploy:
+  stage: deploy
+  only:
+  - demo/module10/test_3
+  image: tmaier/dpl
+  script: dpl --provider=heroku --app=${HEROKU_APP_NAME} --api-key=${HEROKU_API_KEY}
