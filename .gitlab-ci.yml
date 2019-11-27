@@ -6,13 +6,13 @@ cache:
   key: ${CI_COMMIT_REF_SLUG}
 
 build:
-  script: npm install
+  script: npm install --silent
   stage: build
   only:
   - deploy
 
 unit-test-client:
   stage: test
-  script: npm run test:unit:client
+  script: npm run test:unit:client -- --silent
   only:
   - deploy
