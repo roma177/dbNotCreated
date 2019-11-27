@@ -31,7 +31,7 @@ e2e-test:
   stage: test
   only:
   - demo/module10/test_3
-  script: npm run:test:e2e -- --silent
+  script: npm run test:e2e -- --silent
   image: circleci/node:10.15.3-browsers
   services:
   - mongo:3.6.11
