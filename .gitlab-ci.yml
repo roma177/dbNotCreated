@@ -9,10 +9,10 @@ build:
   script: npm install --silent
   stage: build
   only:
-  - deploy
+  - demo/module10/test_3
 
 unit-test-client:
   stage: test
   script: npm run test:unit:client -- --silent
   only:
-  - deploy
+  - demo/module10/test_3
