@@ -35,7 +35,7 @@ e2e-test:
   image: circleci/node:10.15.3-browsers
   services:
   - mongo:3.6.11
-  variabkes:
+  variables:
     NODE_ENV: production
 
 variables:
