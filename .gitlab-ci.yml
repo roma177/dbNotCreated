@@ -28,4 +28,4 @@ unit-test-server:
     JWT_SECRET: f0v89dj0df98
     NODE_ENV: test
     DB_NAME_TEST: printbay_test
-    MONGO_DB_URI: mongo://mongo:27017
+    MONGO_DB_URI: mongodb://mongo:27017
