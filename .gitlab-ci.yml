@@ -5,6 +5,11 @@ cache:
     - node_modules
   key: ${CI_COMMIT_REF_SLUG}
 
+variables:
+  JWT_SECRET: ds9d87j92j9
+  DB_NAME_TEST: printbay_test
+  MONGO_DB_URI: mongodb://mongo:27017
+
 build:
   script: npm install --silent
   stage: build
@@ -25,7 +30,15 @@ unit-test-server:
   services:
     - mongo:3.6.11
   variables:
-    JWT_SECRET: ds9d87j92j9
     NODE_ENV: test
-    DB_NAME_TEST: printbay_test
-    MONGO_DB_URI: mongodb://mongo:27017
+
+e2e-test:
+  stage: test
+  only:
+    - deploy
+  script: npm run test:e2e
+  image: circleci/node:10.15.3-browsers
+  services:
+    - mongo:3.6.11
+  variables:
+    NODE_ENV: production
