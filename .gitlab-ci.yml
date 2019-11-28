@@ -6,7 +6,7 @@ cache:
   key: ${CI_COMMIT_REF_SLUG}
 
 build:
-  script: npm install
+  script: npm install --silent
   stage: build
   only:
     - deploy
