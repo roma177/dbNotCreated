@@ -1,9 +1,4 @@
 image: node:10.15.3
-<<<<<<< HEAD
 
 build:
-  script: echo "Hello World"
-=======
-build:
   script: npm install
->>>>>>> deploy
