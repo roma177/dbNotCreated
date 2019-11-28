@@ -1,4 +1,14 @@
 image: node:10.15.3
 
+cache:
+  paths:
+    - node_modules
+  key: ${CI_COMMIT_REF_SLUG}
+
 build:
   script: npm install
+  stage: build
+
+unit-test-client:
+  stage: test
+  script: npm run test:unit:client
