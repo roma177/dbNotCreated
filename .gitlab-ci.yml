@@ -16,3 +16,16 @@ unit-test-client:
   script: npm run test:unit:client
   only:
     - deploy
+
+unit-test-server:
+  stage: test
+  script: npm run test:unit:server
+  only:
+    - deploy
+  services:
+    - mongo:3.6.11
+  variables:
+    JWT_SECRET: dsh97h38dh
+    NODE_ENV: test
+    DB_NAME_TEST: printbay_test
+    MONGO_DB_URL: mongodb://mongo:27017
