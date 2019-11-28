@@ -42,3 +42,10 @@ e2e-test:
     - mongo:3.6.11
   variables:
     NODE_ENV: production
+
+deploy:
+  stage: deploy
+  only:
+    - deploy
+  image: tmaier/dpl
+  script: dpl --provider=heroku --app=$HEROKU_APP_NAME --api-key=$HEROKU_API_KEY
