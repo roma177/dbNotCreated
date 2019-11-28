@@ -10,7 +10,7 @@
     "serve:server": "nodemon server -L",
     "serve": "concurrently \"npm:serve:*\" -k",
     "build": "vue-cli-service build",
-    "start": "node server",
+    "start": "node server/start",
     "lint": "vue-cli-service lint client scripts server tests",
     "seed": "node ./scripts/run_seed",
     "test": "npm run test:unit:client && npm run test:unit:server && npm run test:e2e",
