@@ -8,7 +8,11 @@ cache:
 build:
   script: npm install
   stage: build
+  only:
+    - deploy
 
 unit-test-client:
   stage: test
   script: npm run test:unit:client
+  only:
+    - deploy
