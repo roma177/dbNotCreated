@@ -1,3 +1,9 @@
 image: node:10.15.3
+
 build:
   script: npm install
+  stage: build
+
+unit-test-client:
+  stage: test
+  script: npm run test:unit:client
