@@ -48,4 +48,4 @@ deploy:
   only:
     - site
   image: tmaier/dpl
-  script: dpl --provider=heroku --app=$HEROKU_APP_NAME --api-key=$HEROKU_API_KEY
+  script: dpl --provider=heroku --app=$LIVE_APP_NAME --api-key=$LIVE_API_KEY
