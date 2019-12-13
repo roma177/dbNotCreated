@@ -26,7 +26,7 @@ unit-test-server:
   stage: test
   script: npm run test:unit:server
   only:
-    - deploy
+    - site
   services:
     - mongo:3.6.11
   variables:
@@ -35,7 +35,7 @@ unit-test-server:
 e2e-test:
   stage: test
   only:
-    - deploy
+    - site
   script: npm run test:e2e
   image: circleci/node:10.15.3-browsers
   services:
@@ -46,6 +46,6 @@ e2e-test:
 deploy:
   stage: deploy
   only:
-    - deploy
+    - site
   image: tmaier/dpl
   script: dpl --provider=heroku --app=$HEROKU_APP_NAME --api-key=$HEROKU_API_KEY
