@@ -24,6 +24,14 @@
       :external-errors="passwordAPIErrors"
       @error="inputErrorStateChange"
     />
+    <v-btn
+      name="submit"
+      color="blue-grey darken-4 white--text"
+      class="elevation-0 mx-0"
+      @click="submit"
+    >
+      Submit
+    </v-btn>
   </form>
 </template>
 <script>
