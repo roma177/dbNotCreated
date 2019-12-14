@@ -2,6 +2,7 @@
 
 exports[`App.vue should render correctly 1`] = `
 <v-app-stub id="app">
+  <projectinfo-stub></projectinfo-stub>
   <stickynav-stub></stickynav-stub>
   <fixednav-stub></fixednav-stub>
   <v-content-stub tag="main">
