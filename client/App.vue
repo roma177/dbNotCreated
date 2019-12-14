@@ -1,5 +1,6 @@
 <template>
   <v-app>
+    <ProjectInfo />
     <StickyNav />
     <FixedNav />
     <v-content>
@@ -14,8 +15,10 @@
 import PageFooter from "@components/PageFooter";
 import StickyNav from "@components/StickyNav";
 import FixedNav from "@components/FixedNav";
+import ProjectInfo from "./components/ProjectInfo";
 export default {
   components: {
+    ProjectInfo,
     PageFooter,
     StickyNav,
     FixedNav

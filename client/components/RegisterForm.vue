@@ -24,7 +24,6 @@
       :external-errors="passwordAPIErrors"
       @error="inputErrorStateChange"
     />
-
   </form>
 </template>
 <script>
