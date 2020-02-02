@@ -22,7 +22,7 @@ app.use("/users", require("./routes/users"));
 
 app.use("/public", express.static(path.join(__dirname, "..", "public")));
 if (NODE_ENV === "production") {
-  app.use("/", express.static(path.join(__dirname, "..", "dist")));
+  app.use("*", express.static(path.join(__dirname, "..", "dist")));
 }
 
 if (!isTest) {
