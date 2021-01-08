@@ -14,6 +14,6 @@ docker run --rm -it -v ${SCRIPT_DIR}:/workdir --workdir=/workdir --name=${DOCKER
     -p 8060:8060 \
     -p 8070:8070 \
     -p 8080:8080 \
-    -p 27017:27018 \
+    -p 27017:27017 \
     -p 35729:35729 \
     ${DOCKER_IMAGE}
